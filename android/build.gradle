@@ -18,4 +18,15 @@ buildscript {
     }
 }
 
+
+// Workaround for Gradle 8 state tracking errors
+gradle.projectsEvaluated {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        doNotTrackState()
+    }
+    tasks.withType(com.android.build.gradle.tasks.ExternalNativeBuildTask).configureEach {
+        doNotTrackState()
+    }
+}
+
 apply plugin: "com.facebook.react.rootproject"

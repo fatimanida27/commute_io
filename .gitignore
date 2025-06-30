@@ -73,3 +73,13 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Ignore node_modules (big folder)
+node_modules
+
+# Optional: Ignore logs and other big/temp files
+*.log
+dist
+build
+.env
+.DS_Store
