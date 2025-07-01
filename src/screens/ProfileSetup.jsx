@@ -80,14 +80,20 @@ export default function ProfileSetupScreen({navigation}) {
 
       {/* Optional */}
       <Text style={styles.sectionTitle}>Optional</Text>
-      <TouchableOpacity style={styles.optionalRow}>
-        <Text style={styles.optionalText}>Set Daily Schedule</Text>
+      <TouchableOpacity 
+  style={styles.optionalRow} 
+  onPress={() => navigation.navigate('DailySchedule')}
+>
+      <Text style={styles.optionalText}>Set Daily Schedule</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.optionalRow}
        onPress={() => navigation.navigate('PreferedPickupLocations')}
         >
         <Text style={styles.optionalText}>Preferred Pickup Locations</Text>
       </TouchableOpacity>
+
+      
+
 
       {/* Save Button */}
       <TouchableOpacity style={styles.saveButton}>
