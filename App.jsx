@@ -6,6 +6,7 @@ import phonenumber from './src/screens/phonenumberpage';
 import PhoneOTP from './src/screens/PhoneOTP';
 import ProfileSetup from './src/screens/ProfileSetup';
 import PreferedPickupLocations from './src/screens/preferedpickuplocations';
+import DailySchedule from './src/screens/DailySchedule';
 const Stack = createNativeStackNavigator();
 
 
@@ -22,7 +23,7 @@ const App = () => {
         <Stack.Screen name="PhoneOTP" component={PhoneOTP} />
         <Stack.Screen name="ProfileSetup" component={ProfileSetup} />
         <Stack.Screen name="PreferedPickupLocations" component={PreferedPickupLocations} />
-
+        <Stack.Screen name="DailySchedule" component={DailySchedule}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
